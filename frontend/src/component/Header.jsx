@@ -9,17 +9,17 @@ import { Link  } from "react-router-dom"
     return (
         <>
           <marquee>Chào mừng đến với MagicPost</marquee>
-        <nav class="navbar">
-        <div class="brand-title">
+        <nav className="navbar">
+        <div className="brand-title">
     <img  width={95} height={60} src={logo} />
         <p>Magic Post</p>
         </div>
-  <a href="#" class="toggle-button">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
+  <a href="#" className="toggle-button">
+    <span className="bar"></span>
+    <span className="bar"></span>
+    <span className="bar"></span>
   </a>
-  <div class="navbar-links">
+  <div className="navbar-links">
     <ul>
       <li><a href="#">Login</a></li>
       <li><a href="#">About</a></li>
