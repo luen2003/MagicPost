@@ -21,7 +21,7 @@ import { Link  } from "react-router-dom"
   </a>
   <div className="navbar-links">
     <ul>
-      <li><a href="#">Login</a></li>
+      <li><a href="/login">Login</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
@@ -32,7 +32,6 @@ import { Link  } from "react-router-dom"
   <h1>Menu</h1>
   <ul className='menu'>
     <li><Link  to='/search'>Tim kiem</Link></li>
-    <li><Link className='boxMenu' to= '/orderManagement'>Quan ly don hang</Link></li>
   </ul>
   </div>
 </div>
