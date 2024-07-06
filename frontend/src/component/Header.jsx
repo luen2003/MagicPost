@@ -1,7 +1,18 @@
 import logo from '../assets/header.jpeg'
 import { Link  } from "react-router-dom"
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../actions/userActions'
 
  const  Header = () => {
+  const dispatch = useDispatch()
+
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
+  const logoutHandler = () => {
+    dispatch(logout())
+  }
+
     window.addEventListener("scroll", function() {
         const header = document.querySelector(".navbar")
         header.classList.toggle("active",this.window.scrollY > 200)
@@ -21,9 +32,11 @@ import { Link  } from "react-router-dom"
   </a>
   <div className="navbar-links">
     <ul>
-      <li><a href="/login">Login</a></li>
+      {userInfo ?<li><a href="#">Username: {userInfo.name}</a></li> :<li><a href="/login">Login</a></li>}
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
+      {userInfo && <li><a href="#" onClick={logoutHandler}>Logout</a></li>}
+
     </ul>
   </div>
 </nav>
