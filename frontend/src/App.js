@@ -14,6 +14,8 @@ import Register from './Register';
 import LatestPosts from './component/LatestPost';
 import Post from './component/Post';
 import SearchBar from './component/SearchBar';
+import PostManage from './PostManage';
+import PostEdit from './PostEdit';
 
 function App() {
   return (  
@@ -26,6 +28,9 @@ function App() {
       <Route path='/posts/:id'element={<Post/>} />
       <Route path='/search/:keyword' element={<LatestPosts/>}  />
       <Route path='/search' element={<Search/>} exact />
+      <Route path='/admin/postlist' element={<PostManage/>} exact />
+      <Route path='/admin/post/:id/edit' element={<PostEdit/>} />
+
 
     </Routes>
     </Router>

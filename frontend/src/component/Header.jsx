@@ -45,6 +45,9 @@ import { logout } from '../actions/userActions'
   <h1>Menu</h1>
   <ul className='menu'>
     <li><Link  to='/search'>Tim kiem</Link></li>
+    {userInfo && userInfo.isAdmin && <li><Link  to='/admin/postlist'>Quan ly don hang</Link></li>}
+
+    
   </ul>
   </div>
 </div>

@@ -43,7 +43,7 @@ const deletePost = asyncHandler(async (req, res) => {
   const post = await Post.findById(req.params.id)
 
   if (post) {
-    await post.remove()
+    await post.deleteOne()
     res.json({ message: 'Post removed' })
   } else {
     res.status(404)
@@ -57,6 +57,8 @@ const deletePost = asyncHandler(async (req, res) => {
 const createPost = asyncHandler(async (req, res) => {
   const post = new Post({
     postItem: 'Sample name',
+    sender: 'User',
+    recipient: 'User',
     user: req.user._id,
     
   })
