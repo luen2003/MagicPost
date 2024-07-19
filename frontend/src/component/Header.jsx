@@ -25,11 +25,7 @@ import { logout } from '../actions/userActions'
     <img  width={95} height={60} src={logo} />
         <p>Magic Post</p>
         </div>
-  <a href="#" className="toggle-button">
-    <span className="bar"></span>
-    <span className="bar"></span>
-    <span className="bar"></span>
-  </a>
+
   <div className="navbar-links">
     <ul>
       {userInfo ?<li><a href="#">Username: {userInfo.name}</a></li> :<li><a href="/login">Login</a></li>}

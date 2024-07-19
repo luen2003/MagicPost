@@ -20,7 +20,7 @@ export const Branding = () => {
       ]
   return (
     <section  className='branding'>
-        <div className='container grid'>
+        <div className='container flex'>
             {data.map((value) => {
                 return <div className='box flex'>
                     <div className="text">

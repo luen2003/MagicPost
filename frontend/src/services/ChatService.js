@@ -6,7 +6,7 @@ const baseURL = "http://localhost:5000/api";
 
 export const useApi = () => {
   const { currentUser } = useAuth();
-z
+
   const createHeader = () => {
     const token = currentUser.token;
 
