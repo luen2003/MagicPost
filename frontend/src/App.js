@@ -16,10 +16,14 @@ import Post from './component/Post';
 import SearchBar from './component/SearchBar';
 import PostManage from './PostManage';
 import PostEdit from './PostEdit';
+import { AuthProvider } from './contexts/AuthContext';
+import ChatLayout from './component/ChatLayout'
+import WithPrivateRoute from './utils/WithPrivateRoute';
 
 function App() {
   return (  
     <>
+    <AuthProvider>
     <Router>
     <Routes>
     <Route path="/" element={<Homepage />} />
@@ -30,10 +34,19 @@ function App() {
       <Route path='/search' element={<Search/>} exact />
       <Route path='/admin/postlist' element={<PostManage/>} exact />
       <Route path='/admin/post/:id/edit' element={<PostEdit/>} />
-
+      <Route
+            exact
+            path="/chat"
+            element={
+              <WithPrivateRoute>
+              <ChatLayout />
+              </WithPrivateRoute>
+            }
+          />
 
     </Routes>
     </Router>
+    </AuthProvider>
     </>
   );
 }

@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root{
   --blue:#3498db;
   --red:#e74c3c;
@@ -131,6 +134,14 @@ body {
     transform: translateY(-100px);
 
 
+}
+.navSidebar h1 {
+  font-size: 30px;
+  font-weight:500;
+}
+.navSidebar li {
+  margin-top: 18px;
+  color: #008cff;
 }
 
 .leftmenuinnerinner {

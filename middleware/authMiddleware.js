@@ -39,4 +39,35 @@ const admin = (req, res, next) => {
   }
 }
 
-export { protect, admin }
+export const VerifyToken = async (req, res, next) => {
+  const token = req.headers.authorization?.split(" ")[1];
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET)
+
+    if (decoded) {
+      req.user = await User.findById(decoded.id).select('-password')
+      return next();
+    }
+  } catch (e) {
+    return res.json({ message: "Internal Error" });
+  }
+};
+
+export const VerifySocketToken = async (socket, next) => {
+  const token = socket.handshake.auth.token;
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET)
+
+    if (decoded) {
+      socket.user = User.findById(decoded.id).select('-password');
+
+      return next();
+    }
+  } catch (e) {
+    return next(new Error("Internal Error"));
+  }
+};
+
+export { protect, admin}
