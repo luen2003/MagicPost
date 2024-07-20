@@ -69,7 +69,7 @@ const server = app.listen(
 
 const io = new Server(server, {
   cors: {
-    origin: "https://mgpost.onrender.com/",
+    origin: ["http://localhost:3000","https://mgpost.onrender.com"],
     credentials: true,
   },
 });
