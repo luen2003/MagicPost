@@ -67,40 +67,6 @@ body {
 
 
 
-@media only screen and (max-width: 600px) {
-  .flex {
-    flex-direction: column;
-  }
-  .branding .box {
-    width: 100%;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-links {
-    width: 100%;
-  }
-
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-links li {
-    text-align: center;
-  }
-
-  .navbar-links li a {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-}
 
 .navbar .active {
     position: sticky;
@@ -133,13 +99,57 @@ body {
 
 .leftmenuinnerinner {
   height: 100%;
-  width: 100%;
+  width: 75%;
   background-color: aliceblue;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-top: 20px;
   z-index: 10;
 
+}
+
+
+@media only screen and (max-width: 468px) {
+  .flex {
+    flex-direction: column;
+  }
+  .branding .box {
+    width: 100%;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+  .content {
+    width: 300px;
+    transform: translateX(-100px);
+  }
+  .navSidebar {
+    width: 150px;
+    margin: 0;
+  }
 }
 .menu{
   padding-left: 0;
