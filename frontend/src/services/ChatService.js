@@ -2,7 +2,7 @@ import { useAuth } from "../contexts/AuthContext";
 import axios from "axios";
 import { io } from "socket.io-client";
 
-const baseURL = "/api";
+const baseURL = "https://mgpost.onrender.com/api";
 
 export const useApi = () => {
   const { currentUser } = useAuth();
