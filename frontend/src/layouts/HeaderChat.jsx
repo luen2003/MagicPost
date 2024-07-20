@@ -35,7 +35,7 @@ export default function Header() {
                 </button>
 
                 <Link
-                  to="/profile"
+                  to="/chat"
                   className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-full text-sm p-2.5"
                 >
                   <img

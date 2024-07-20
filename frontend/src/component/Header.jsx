@@ -31,7 +31,7 @@ import { logout } from '../actions/userActions'
       {userInfo ?<li><a href="#">Username: {userInfo.name}</a></li> :<li><a href="/login">Login</a></li>}
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
-      {userInfo && <li><a href="/chat" >Chat</a></li>}
+      <li><a href="/chat" >Chat</a></li>
       {userInfo && <li><a href="#" onClick={logoutHandler}>Logout</a></li>}
 
 
