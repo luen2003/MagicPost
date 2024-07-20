@@ -32,7 +32,7 @@ export default function Logout({ modal, setModal }) {
     <Transition.Root show={modal} as={Fragment}>
       <Dialog
         as="div"
-        className="fixed z-10 inset-0 overflow-y-auto"
+        className="fixed z-10 inset-0 overflow-y-auto flex items-center justify-center h-screen"
         initialFocus={cancelButtonRef}
         onClose={setModal}
       >
@@ -51,7 +51,7 @@ export default function Logout({ modal, setModal }) {
 
           {/* This element is to trick the browser into centering the modal contents. */}
           <span
-            className="hidden sm:inline-block sm:align-middle sm:h-screen"
+            className="hidden sm:inline-block sm:align-middle sm:h-screen flex items-center justify-center h-screen"
             aria-hidden="true"
           >
             &#8203;
@@ -92,7 +92,7 @@ export default function Logout({ modal, setModal }) {
               <div className="bg-gray-50 dark:bg-gray-700 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   type="button"
-                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
                   onClick={handleLogout}
                 >
                   Logout
