@@ -21,7 +21,7 @@ export const useApi = () => {
   const initiateSocketConnection = () => {
     const token = currentUser.token;
 
-    const socket = io("https://mgpost.onrender.com", {
+    const socket = io("https://mgpost.onrender.com:5000", {
       auth: {
         token,
       },
