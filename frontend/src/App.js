@@ -19,6 +19,8 @@ import PostEdit from './PostEdit';
 import { AuthProvider } from './contexts/AuthContext';
 import ChatLayout from './component/ChatLayout'
 import WithPrivateRoute from './utils/WithPrivateRoute';
+import UserEditScreen from './component/UserEditScreen';
+import UserListScreen from './component/UserListScreen';
 
 function App() {
   return (  
@@ -43,6 +45,8 @@ function App() {
               </WithPrivateRoute>
             }
           />
+              <Route path='/admin/userlist' element={<UserListScreen/>} />
+              <Route path='/admin/user/:id/edit' element={<UserEditScreen/>} />
 
     </Routes>
     </Router>

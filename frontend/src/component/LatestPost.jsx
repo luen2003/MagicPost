@@ -15,7 +15,6 @@ const LatestPosts = () => {
   useEffect(() => {
     dispatch(listPosts(keyword))
   }, [dispatch, keyword])
-console.log(keyword)
 
 
 
