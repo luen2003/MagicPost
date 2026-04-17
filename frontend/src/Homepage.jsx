@@ -16,6 +16,8 @@ import Pricing from './component/Pricing';
 import axios from 'axios';
 import Charts from './component/Charts';
 import RatingChart from './RatingChart';
+import AreaChartComponent from './component/AreaChart';
+
 const Homepage = () => {
   const { currentUser } = useAuth();
   const navigate = useNavigate(); // Initialize useNavigate
@@ -56,6 +58,7 @@ const Homepage = () => {
         <Hero />
         <RatingChart/>
         <Charts />
+        <AreaChartComponent />
         <Steps />
         <CTA />
         <Pricing />
